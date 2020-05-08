@@ -4,6 +4,7 @@ import Login from "./pages/Login";
 import Search from "./pages/Search";
 import Profile from "./pages/Profile";
 import Collaborators from "./pages/Collaborators"
+import CreateAccount from "./pages/CreateAccount"
 import { StoreProvider } from "./utils/GlobalState";
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
           <Switch>
             <Route exact path="/" component={Login} />
             <Route exact path="/login" component={Login} />
+            <Route exact path="/new" component={CreateAccount} />
             <Route exact path="/search" component={Search} />
             <Route exact path="/profile" component={Profile} />
             <Route exact path="/collaborators" component={Collaborators} />
