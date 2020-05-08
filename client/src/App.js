@@ -3,8 +3,8 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Login from "./pages/Login";
 import Search from "./pages/Search";
 import Profile from "./pages/Profile";
-import Collaborators from "./pages/Collaborators"
-import CreateAccount from "./pages/CreateAccount"
+import Collaborators from "./pages/Collaborators";
+import CreateAccount from "./pages/CreateAccount";
 import { StoreProvider } from "./utils/GlobalState";
 
 function App() {
