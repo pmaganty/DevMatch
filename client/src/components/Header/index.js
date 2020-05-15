@@ -1,7 +1,7 @@
 import React from "react";
 import "./style.css";
-import { useStoreContext } from "../../utils/GlobalState";
-import API from "../../utils/API";
+// import { useStoreContext } from "../../utils/GlobalState";
+// import API from "../../utils/API";
 
 const Header = () => {
   return (
