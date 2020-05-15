@@ -1,52 +1,29 @@
 import React from "react";
 import "./style.css";
+import { Link } from "react-router-dom";
 import { useStoreContext } from "../../utils/GlobalState";
 import API from "../../utils/API";
 
 const Header = () => {
   return (
 <nav className="navbar navbar-expand-lg navbar-light bg-light">
-        <a className="navbar-brand">DevMatch</a>
+        <a className="navbar-brand">TEST NAV BAR</a>
         <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>
         </button>
         <div className="collapse navbar-collapse" id="navbarNavDropdown">
-            <ul className="navbar-nav" id="navlist">
+            <ul className="navbar-nav">
             <li className="nav-item">
-            <Link
-                onClick={this.toggleNav}
-                className={window.location.pathname === "/login" ? "nav-link active" : "nav-link"}
-                to="/login"
-              >
-                Logout
-            </Link>
+                <a className="nav-link" href="/login">Logout</a>
             </li>
             <li className="nav-item">
-            <Link
-                onClick={this.toggleNav}
-                className={window.location.pathname === "/profile" ? "nav-link active" : "nav-link"}
-                to="/profile"
-              >
-                Profile
-            </Link>
+                <a className="nav-link" href="/profile">Profile</a>
             </li>
             <li className="nav-item">
-            <Link
-                onClick={this.toggleNav}
-                className={window.location.pathname === "/search" ? "nav-link active" : "nav-link"}
-                to="/search"
-              >
-                Search
-            </Link>
+                <a className="nav-link" href="/search">Search</a>
             </li>
             <li className="nav-item">
-                <Link
-                onClick={this.toggleNav}
-                className={window.location.pathname === "/collaborators" ? "nav-link active" : "nav-link"}
-                to="/collaborators"
-              >
-                Collaborators
-            </Link>
+                <a className="nav-link" href="/collaborators">Collaborators</a>
             </li>
             </ul>
         </div>
