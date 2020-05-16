@@ -6,11 +6,11 @@ router.route("/")
   .get(profilesController.findAll)
   .post(profilesController.create);
 
-// Matches with "/api/profiles/:id"
+// Matches with "/api/profiles/:skills"
 router
-  .route("/:id")
-  .get(profilesController.findById)
-  .put(profilesController.update)
-  .delete(profilesController.remove);
+.route("/:skills")
+.get(profilesController.findBySkill)
+.put(profilesController.update)
+.delete(profilesController.remove);
 
 module.exports = router;

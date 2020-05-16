@@ -1,0 +1,39 @@
+#text {
+    color: #F0ECE2;
+    width: 513px;
+    height: 112px;
+    left: 86px;
+    top: 194px;
+    
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 48px;
+    line-height: 56px;
+    
+    color: #F0ECE2;
+    background: #2E7180;
+}
+
+#textDiv {
+    margin: auto;
+    justify-content: center;
+    display: flex;
+}
+
+#inputBox {
+    width: 50%;
+    top: 208px;
+    background: #F0ECE2;
+    border-radius: 15px;
+    font-size: 25px;
+}
+
+#input {
+    margin-top: 120px;
+}
+
+.whole {
+    background: #2E7180;
+    height: 250px;
+}

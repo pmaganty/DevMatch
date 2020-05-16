@@ -15,6 +15,20 @@ module.exports = {
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },
+  findBySkill: function(req, res) {
+    console.log("INSIDE FIND BY SKILLS FUNCTION");
+    console.log(req.params.skills);
+    /*const skillArr = req.params.skills.split(",");
+    for (let i = 0; i < skillArr.length; i++) {
+      skillArr[i] = skillArr[i].trim().toLowerCase();
+    }
+
+    console.log(skillArr);*/
+    db.Profile
+      .find( { skills: { $in: [ req.params.skills ] } } )
+      .then(dbModel => res.json(dbModel))
+      .catch(err => res.status(422).json(err));
+  },
   create: function(req, res) {
     db.Profile
       .create(req.body)

@@ -3,10 +3,17 @@ import "./style.css";
 import { Link } from "react-router-dom";
 import { useStoreContext } from "../../utils/GlobalState";
 import API from "../../utils/API";
+import { useAuth0 } from "../../react-auth0-spa"; //ADDED FOR AUTH
 
 const Header = () => {
+
+
+
   return (
-<nav className="navbar navbar-expand-lg navbar-light bg-light">
+    <div>
+
+    <div>
+      <nav className="navbar navbar-expand-lg navbar-light bg-light">
         <a className="navbar-brand">TEST NAV BAR</a>
         <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>
@@ -27,7 +34,9 @@ const Header = () => {
             </li>
             </ul>
         </div>
-    </nav>
+      </nav>
+    </div>
+    </div>
   );
 };
 

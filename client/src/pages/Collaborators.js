@@ -6,7 +6,7 @@ import API from "../utils/API";
 function Collaborators() {
   return (
     <div>
-    <Header />
+    {/* <Header /> */}
     <h1>COLLABORATORS PAGE</h1>
     </div>
   );

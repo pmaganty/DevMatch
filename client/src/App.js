@@ -6,23 +6,37 @@ import Profile from "./pages/Profile";
 import Collaborators from "./pages/Collaborators";
 import CreateAccount from "./pages/CreateAccount";
 import { StoreProvider } from "./utils/GlobalState";
+import { useAuth0 } from "./react-auth0-spa";
+import Header from "./components/Header";
+import history from "./utils/history"; //FOR AUTH
+import PrivateRoute from "./components/PrivateRoute"; //FOR AUTH
+import AuthHeader from "./components/AuthHeader";
 
 function App() {
+
+  const { loading } = useAuth0(); //ADDED FOR AUTH
+
+  if (loading) { //ADDED FOR AUTH
+    return <div>Loading...</div>;
+  }
+
   return (
-    <Router>
-      <div>
+    <div className="App">
+    <Router history={history}>
+        <header>
+          <AuthHeader />
+        </header>
         <StoreProvider>
           <Switch>
-            <Route exact path="/" component={Login} />
-            <Route exact path="/login" component={Login} />
-            <Route exact path="/new" component={CreateAccount} />
-            <Route exact path="/search" component={Search} />
-            <Route exact path="/profile" component={Profile} />
-            <Route exact path="/collaborators" component={Collaborators} />
-          </Switch>
+            <Route path="/" exact />
+            <PrivateRoute path="/profile" component={Profile} />
+            <PrivateRoute exact path="/login" component={Login} />
+            <PrivateRoute exact path="/new" component={CreateAccount} />
+            <PrivateRoute exact path="/search" component={Search} />
+          </Switch> 
         </StoreProvider>
-      </div>
     </Router>
+    </div>
   );
 }
 
