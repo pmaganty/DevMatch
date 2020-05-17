@@ -3,6 +3,7 @@ import "./style.css";
 import { Link } from "react-router-dom";
 import { useStoreContext } from "../../utils/GlobalState";
 import API from "../../utils/API";
+import ProfileCard from "../ProfileCard";
 
 const SearchResults = () => {
 
@@ -12,13 +13,11 @@ const SearchResults = () => {
 
 
     return (  
-    <div className="row justify-content-center">
-                  {state.curSearch.map(profile => (
-                    <div key={profile._id}>
-                        <p>{profile.name}</p>
-                    </div>
-                  ))}
-    </div>
+        <div>
+            {state.curSearch.map(profile => (
+            <ProfileCard/>
+            ))}
+        </div>
     );
 }
 
