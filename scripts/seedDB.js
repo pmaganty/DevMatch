@@ -18,14 +18,14 @@ const profileSeed = [
   },
   {
     name: "Spongebob Squarepants",
-    skills: ["frying", "jellyfishing", "singing"],
+    skills: ["node", "react", "html"],
     description: "I love everything and everyone and I want to make friends and I am an excellent frycook!",
     email: "spongebob.squarepants@krustykrab.com",
     phone: "6666666666"
   },
   {
     name: "Bill Gates",
-    skills: ["React", "Python", "Docker"],
+    skills: ["react", "python", "docker"],
     description: "Trust me I'm really smart...",
     email: "billgates@whatever.com",
     phone: "2067778765"

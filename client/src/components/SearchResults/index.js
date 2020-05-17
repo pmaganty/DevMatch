@@ -15,7 +15,13 @@ const SearchResults = () => {
     return (  
         <div>
             {state.curSearch.map(profile => (
-            <ProfileCard/>
+            <ProfileCard
+            name = {profile.name}
+            skills = {profile.skills}
+            description = {profile.description}
+            phone = {profile.phone}
+            email = {profile.email}
+            />
             ))}
         </div>
     );
