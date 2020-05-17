@@ -13,4 +13,11 @@ router
 .put(profilesController.update)
 .delete(profilesController.remove);
 
+// Matches with "/api/profiles/:skills"
+// router
+// .route("/:email")
+// .get(profilesController.findByEmail)
+// .put(profilesController.update)
+// .delete(profilesController.remove);
+
 module.exports = router;

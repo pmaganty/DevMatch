@@ -19,7 +19,14 @@ export default {
   },
 
   getMatch: function(skills) {
+    console.log("GET MATCH");
     console.log(skills);
     return axios.get("/api/profiles/" + skills);
+  },
+
+  getProfileInfo: function(email) {
+    console.log(email);
+    return axios.get("/api/profiles/" + email);
   }
+
 };

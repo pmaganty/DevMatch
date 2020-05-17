@@ -7,7 +7,7 @@ import { ListItem } from "../List";
 import { Row, Col } from "../Grid";
 
 
-function ProfileCard ({ name, skills, description, email, phone }) {
+function ProfileCard ({ name, skills, description, email, phone, Button }) {
     return (
       <ListItem>
         <Row className="flex-wrap-reverse">
@@ -16,8 +16,7 @@ function ProfileCard ({ name, skills, description, email, phone }) {
           </Col>
           <Col size="md-4">
             <div className="btn-container">
-                Collaborate
-              {/* <Button /> */}
+                <Button />
             </div>
           </Col>
         </Row>

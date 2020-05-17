@@ -10,6 +10,7 @@ const SearchResults = () => {
     const [state, dispatch] = useStoreContext();
 
     console.log(state.curSearch);
+  
 
 
     return (  
@@ -21,6 +22,11 @@ const SearchResults = () => {
             description = {profile.description}
             phone = {profile.phone}
             email = {profile.email}
+            Button = {() => (<button                      
+                                className="btn btn-primary ml-2"
+                            >
+                                Collaborate
+                            </button>)}
             />
             ))}
         </div>
