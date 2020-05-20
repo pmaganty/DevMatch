@@ -50,8 +50,10 @@ module.exports = {
       .catch(err => res.status(422).json(err));
   },
   updateCollab: function(req, res) {
+    console.log("INSIDE UPDATE COLLAB FUNCTION");
+    console.log(req.body);
     db.Profile
-      .findOneAndUpdate({ _id: req.params.id }, req.body)
+      .update( { _id: req.body.curId }, { $push: { collaborators: req.body.id } } )
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },

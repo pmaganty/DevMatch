@@ -27,11 +27,12 @@ export default {
   getProfileInfo: function(email) {
     console.log(email);
     return axios.get("/api/profiles/email/" + email);
-  }
+  },
 
-  // saveCollab: function() {
-  //   console.log(email);
-  //   return axios.get("/api/profiles/" + id);
-  // }
+  saveCollab: function(userIds) {
+    console.log("INSIDE SAVE COLLAB");
+    console.log(userIds);
+    return axios.post("/api/profiles/collabs/", userIds);
+  }
 
 };

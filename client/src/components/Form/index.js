@@ -4,10 +4,13 @@ import { Link } from "react-router-dom";
 import { useStoreContext } from "../../utils/GlobalState";
 import API from "../../utils/API";
 import { useHistory } from "react-router-dom";
+import { useAuth0 } from "../../react-auth0-spa"; //ADDED FOR AUTH
 
 const Form = () => {
 
     const [state, dispatch] = useStoreContext();
+
+    const { user } = useAuth0(); //ADDED FOR AUTH
 
     let historyHook = useHistory();
 
@@ -37,6 +40,11 @@ const Form = () => {
       console.log(res.data); 
       dispatch({type: "ADD_PROFILE", newProfile: res.data});
 
+      console.log(user.email);
+      let profile = await API.getProfileInfo(user.email);
+      console.log(profile);
+      dispatch({type: "SAVE_CURRENT_USER", user: profile.data});
+      
       historyHook.push("/search");
     };
 

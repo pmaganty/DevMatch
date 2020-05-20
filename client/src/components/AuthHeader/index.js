@@ -11,32 +11,32 @@ const AuthHeader = () => {
 
   const { isAuthenticated, loginWithRedirect, logout } = useAuth0(); //ADDED FOR AUTH
 
-  const { user } = useAuth0(); //ADDED FOR AUTH
+  // const { user } = useAuth0(); //ADDED FOR AUTH
 
-  let historyHook = useHistory();
+  // let historyHook = useHistory();
 
-  //const [state, dispatch] = useStoreContext();
-  const [state, dispatch] = useStoreContext();
+  // //const [state, dispatch] = useStoreContext();
+  // const [state, dispatch] = useStoreContext();
   
 
-  const getProfile = async () => {
-    if (user) {
-      console.log(user.email);
-      let profile = await API.getProfileInfo(user.email);
-      console.log(profile);
-      if (!profile.data) {
-        console.log("PROFILE IS NULL");
-        historyHook.push("/new");
-      } else {
-        dispatch({type: "SAVE_CURRENT_USER", user: profile.data});
-        historyHook.push("/search");
-      }
-    }
-  }
+  // const getProfile = async () => {
+  //   if (user) {
+  //     console.log(user.email);
+  //     let profile = await API.getProfileInfo(user.email);
+  //     console.log(profile);
+  //     if (!profile.data) {
+  //       console.log("PROFILE IS NULL");
+  //       historyHook.push("/new");
+  //     } else {
+  //       dispatch({type: "SAVE_CURRENT_USER", user: profile.data});
+  //       historyHook.push("/search");
+  //     }
+  //   }
+  // }
 
-  useEffect(() => {
-    getProfile();
-  }, []);
+  // useEffect(() => {
+  //   getProfile();
+  // }, []);
 
   return (
     <div> {/*DIV ADDED FOR AUTH*/}     

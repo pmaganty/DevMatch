@@ -5,13 +5,14 @@ import API from "../utils/API";
 import SearchBar from "../components/SearchBar";
 import SearchResults from "../components/SearchResults";
 import { useAuth0 } from "../react-auth0-spa";
+import AuthHeader from "../components/AuthHeader";
 
 
 function Search() {
 
   return (
     <div>
-    {/* <Header /> */}
+    <AuthHeader />
     <SearchBar />
     <SearchResults />
     </div>

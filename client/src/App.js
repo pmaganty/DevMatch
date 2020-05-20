@@ -27,11 +27,11 @@ function App() {
     <div className="App">
     <Router history={history}>
         <StoreProvider>
-        <header>
+        {/* <header>
           <AuthHeader />
-        </header>
+        </header> */}
           <Switch>
-            <Route path="/" exact />
+            <Route path="/" exact component={Login}/>
             <PrivateRoute path="/profile" component={Profile} />
             <PrivateRoute exact path="/login" component={Login} />
             <PrivateRoute exact path="/new" component={CreateAccount} />

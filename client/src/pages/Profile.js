@@ -5,8 +5,13 @@ import API from "../utils/API";
 import { useAuth0 } from "../react-auth0-spa"; //FOR AUTH
 import ProfileHeader from "../components/ProfileHeader";
 import ProfileContent from "../components/ProfileContent";
+import AuthHeader from "../components/AuthHeader";
 
 function Profile() {
+
+    const [state, dispatch] = useStoreContext();
+
+    console.log(state);
   
     const { loading, user } = useAuth0();
 
@@ -16,6 +21,7 @@ function Profile() {
 
     return (
     <div>
+        <AuthHeader />
         <ProfileHeader />
         <ProfileContent />
 

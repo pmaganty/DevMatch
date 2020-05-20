@@ -6,6 +6,11 @@ router.route("/")
   .get(profilesController.findAll)
   .post(profilesController.create);
 
+// Matches with "/api/profiles/collabs"
+router.route("/collabs")
+.get(profilesController.findAll)
+.post(profilesController.updateCollab);
+
 // Matches with "/api/profiles/:skills"
  router
 .route("/skills/:skills")
