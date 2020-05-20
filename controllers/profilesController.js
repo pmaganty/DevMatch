@@ -33,7 +33,7 @@ module.exports = {
     console.log("INSIDE FIND BY EMAIL FUNCTION");
     console.log(req.params.email);
     db.Profile
-      .find({ email: req.params.email })
+      .findOne({ email: req.params.email })
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },
@@ -44,6 +44,12 @@ module.exports = {
       .catch(err => res.status(422).json(err));
   },
   update: function(req, res) {
+    db.Profile
+      .findOneAndUpdate({ _id: req.params.id }, req.body)
+      .then(dbModel => res.json(dbModel))
+      .catch(err => res.status(422).json(err));
+  },
+  updateCollab: function(req, res) {
     db.Profile
       .findOneAndUpdate({ _id: req.params.id }, req.body)
       .then(dbModel => res.json(dbModel))

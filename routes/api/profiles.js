@@ -7,17 +7,17 @@ router.route("/")
   .post(profilesController.create);
 
 // Matches with "/api/profiles/:skills"
-router
-.route("/:skills")
+ router
+.route("/skills/:skills")
 .get(profilesController.findBySkill)
 .put(profilesController.update)
 .delete(profilesController.remove);
 
 // Matches with "/api/profiles/:skills"
-// router
-// .route("/:email")
-// .get(profilesController.findByEmail)
-// .put(profilesController.update)
-// .delete(profilesController.remove);
+router
+.route("/email/:email")
+.get(profilesController.findByEmail)
+.put(profilesController.update)
+.delete(profilesController.remove);
 
 module.exports = router;

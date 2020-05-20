@@ -2,7 +2,8 @@ import React, { useContext, useReducer } from "react";
 
 const initialState = {
   profiles: [],
-  curSearch: []
+  curSearch: [],
+  curUser: null
 };
 
 // Think of this as our main Context API that 
@@ -29,6 +30,14 @@ const reducer = (state, action) => {
           ...state,
           curSearch: action.matches
       }
+
+      case "SAVE_CURRENT_USER":
+        console.log("INSIDE ADD NEW USER CASE"); //FOR DEBUG
+        console.log(action.user);
+        return {
+            ...state,
+            curUser: action.user
+        }
 
     default:
       return state;

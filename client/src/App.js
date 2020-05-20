@@ -1,5 +1,5 @@
-import React from "react";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import React, { useEffect } from "react";
+import { BrowserRouter as Router, Route, Switch, useHistory } from "react-router-dom";
 import Login from "./pages/Login";
 import Search from "./pages/Search";
 import Profile from "./pages/Profile";
@@ -11,10 +11,13 @@ import Header from "./components/Header";
 import history from "./utils/history"; //FOR AUTH
 import PrivateRoute from "./components/PrivateRoute"; //FOR AUTH
 import AuthHeader from "./components/AuthHeader";
+import API from "./utils/API";
+
 
 function App() {
 
-  const { loading } = useAuth0(); //ADDED FOR AUTH
+  const { loading, user } = useAuth0(); //ADDED FOR AUTH
+
 
   if (loading) { //ADDED FOR AUTH
     return <div>Loading...</div>;
@@ -23,10 +26,10 @@ function App() {
   return (
     <div className="App">
     <Router history={history}>
+        <StoreProvider>
         <header>
           <AuthHeader />
         </header>
-        <StoreProvider>
           <Switch>
             <Route path="/" exact />
             <PrivateRoute path="/profile" component={Profile} />

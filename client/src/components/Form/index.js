@@ -3,10 +3,13 @@ import "./style.css";
 import { Link } from "react-router-dom";
 import { useStoreContext } from "../../utils/GlobalState";
 import API from "../../utils/API";
+import { useHistory } from "react-router-dom";
 
 const Form = () => {
 
     const [state, dispatch] = useStoreContext();
+
+    let historyHook = useHistory();
 
     const nameRef = useRef();
     const descRef = useRef();
@@ -33,6 +36,8 @@ const Form = () => {
       const res = await API.saveProfile(formData);
       console.log(res.data); 
       dispatch({type: "ADD_PROFILE", newProfile: res.data});
+
+      historyHook.push("/search");
     };
 
     return (  

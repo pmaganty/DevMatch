@@ -21,12 +21,17 @@ export default {
   getMatch: function(skills) {
     console.log("GET MATCH");
     console.log(skills);
-    return axios.get("/api/profiles/" + skills);
+    return axios.get("/api/profiles/skills/" + skills);
   },
 
   getProfileInfo: function(email) {
     console.log(email);
-    return axios.get("/api/profiles/" + email);
+    return axios.get("/api/profiles/email/" + email);
   }
+
+  // saveCollab: function() {
+  //   console.log(email);
+  //   return axios.get("/api/profiles/" + id);
+  // }
 
 };

@@ -19,7 +19,7 @@ function ProfileContent () {
         console.log(user.email);
         let profile = await API.getProfileInfo(user.email);
         console.log(profile.data);
-        userInfo = profile.data[0];
+        userInfo = profile.data;
         console.log(userInfo);
     }, []);
 

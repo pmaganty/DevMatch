@@ -5,7 +5,11 @@ const db = require("../models");
 
 mongoose.connect(
   process.env.MONGODB_URI ||
-  "mongodb://localhost/developerProfiles"
+  "mongodb://localhost/developerProfiles", { 
+    useNewUrlParser: true, 
+    useUnifiedTopology: true,
+    useCreateIndex: true
+   }
 );
 
 const profileSeed = [
@@ -33,7 +37,7 @@ const profileSeed = [
 ];
 
 db.Profile
-  .remove({})
+  .deleteMany({})
   .then(() => db.Profile.collection.insertMany(profileSeed))
   .then(data => {
     //console.log(data);
@@ -44,15 +48,14 @@ db.Profile
       }
 
       if (index == 1) {
-        console.log("INSIDE INDEX 1 CASE");
-        db.Profile.findOneAndUpdate({_id: user._id}, { $push: { collaborators: curInd } }, { new: true })
-        .then(data => (console.log(data)))
-        .catch(err => (console.log(err)));
+        db.Profile.collection.findOneAndUpdate({_id: user._id}, { $push: { collaborators: curInd } }, { new: true })
+        .then(data => console.log(data))
+        .catch(err => console.log(err));
       }
       //console.log(user);
     });
 
-    console.log(curInd);
+    // console.log(curInd);
     console.log(data.result.n + " records inserted!");
     process.exit(0);
   })
