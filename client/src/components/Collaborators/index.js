@@ -7,9 +7,20 @@ import { ListItem } from "../List";
 import { Row, Col } from "../Grid";
 
 
-function Collaborators () {
+function Collaborators ({collaborators}) {
     return (
-        <div></div>
+
+        <div>
+            <div><h2>Collaborators</h2></div>
+             {collaborators.map(collab => (
+                <ul>
+                    <li>{collab.name}</li>
+                    <li>{collab.skills}</li>
+                    <li>{collab.email}</li>
+                    <li>{collab.phone}</li>
+                </ul>
+            ))}           
+        </div>
     );
   }
   

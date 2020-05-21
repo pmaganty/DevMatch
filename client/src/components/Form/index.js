@@ -44,7 +44,7 @@ const Form = () => {
       let profile = await API.getProfileInfo(user.email);
       console.log(profile);
       dispatch({type: "SAVE_CURRENT_USER", user: profile.data});
-      
+
       historyHook.push("/search");
     };
 
@@ -77,7 +77,7 @@ const Form = () => {
           <input className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="512-555-3698" ref={phoneRef}/>
         </div>
   
-        <button type="submit" className="btn btn-primary" onClick={e => addNew(e)}>>Submit</button>
+        <button type="submit" className="btn btn-primary" onClick={e => addNew(e)}>Submit</button>
       </form>
     </div>
     </div>

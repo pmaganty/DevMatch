@@ -38,7 +38,6 @@ function Login() {
     <div>
 
     <AuthHeader />
-    <h1>LOGIN PAGE</h1>
     </div>
   );
 }

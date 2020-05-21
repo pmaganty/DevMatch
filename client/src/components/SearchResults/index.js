@@ -13,6 +13,8 @@ const SearchResults = () => {
     console.log(state);
 
     let curId = state.curUser._id;
+
+    let curUser = state.curUser;
   
     const addCollab = async (id) => {
         //const curId = ;
@@ -21,6 +23,11 @@ const SearchResults = () => {
         const userIds = {curId, id}
         const result = await API.saveCollab(userIds);
         //console.log(result);
+
+        curUser.collaborators.push(id);
+        console.log(curUser);
+
+        dispatch({type: "SAVE_CURRENT_USER", user: curUser});
     }
 
 

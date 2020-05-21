@@ -10,8 +10,6 @@ import AuthHeader from "../components/AuthHeader";
 function Profile() {
 
     const [state, dispatch] = useStoreContext();
-
-    console.log(state);
   
     const { loading, user } = useAuth0();
 
@@ -21,7 +19,8 @@ function Profile() {
 
     return (
     <div>
-        <AuthHeader />
+        {/* <AuthHeader /> */}
+        <Header />
         <ProfileHeader />
         <ProfileContent />
 

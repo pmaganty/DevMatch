@@ -6,51 +6,36 @@ import API from "../../utils/API";
 import { useAuth0 } from "../../react-auth0-spa"; //ADDED FOR AUTH
 import Header from "../Header";
 import { useHistory } from "react-router-dom";
+import logo from './logo.png' // relative path to image 
 
 const AuthHeader = () => {
 
   const { isAuthenticated, loginWithRedirect, logout } = useAuth0(); //ADDED FOR AUTH
 
-  // const { user } = useAuth0(); //ADDED FOR AUTH
-
-  // let historyHook = useHistory();
-
-  // //const [state, dispatch] = useStoreContext();
-  // const [state, dispatch] = useStoreContext();
-  
-
-  // const getProfile = async () => {
-  //   if (user) {
-  //     console.log(user.email);
-  //     let profile = await API.getProfileInfo(user.email);
-  //     console.log(profile);
-  //     if (!profile.data) {
-  //       console.log("PROFILE IS NULL");
-  //       historyHook.push("/new");
-  //     } else {
-  //       dispatch({type: "SAVE_CURRENT_USER", user: profile.data});
-  //       historyHook.push("/search");
-  //     }
-  //   }
-  // }
-
-  // useEffect(() => {
-  //   getProfile();
-  // }, []);
-
   return (
-    <div> {/*DIV ADDED FOR AUTH*/}     
-      {!isAuthenticated && (
-        <button onClick={() => loginWithRedirect({})}>Log in</button>
-      )}
-
-      {isAuthenticated && <button onClick={() => logout()}>Log out</button>}
+    <div className="img-fluid" id="mainPage"> {/*DIV ADDED FOR AUTH*/}     
     
-      {isAuthenticated && (
+      {/* {isAuthenticated && (
       <span>
           <Header />
       </span>
-      )}
+      )} */}
+
+        <div id="centerDiv" className="row justify-content-center">
+          <div className="card text-center col-sm-12 col-md-6 col-lg-6">
+            <div className="card-body">
+              <div className="card-title"><img id="image" src={logo}></img></div>
+              <p className="card-text">Do you have an Idea, but lack the expertise? This application
+                  will allow you to search for and work with other Developers who have the skills you're
+                  looking for. You'll be added into a database alongside many other developers so you can 
+                  create the perfect team that encompasses everything you need to make your dream project 
+                  a reality!</p>
+              {!isAuthenticated && (
+                <button className="btn btn-primary" onClick={() => loginWithRedirect({})}>Log in</button>
+              )}
+            </div>
+          </div>
+        </div>
     
     </div>
   );

@@ -1,0 +1,16 @@
+#mainPage {
+    background-image: linear-gradient(to bottom right, #2E7180, rgb(226, 215, 215));
+    height: 100vh;
+}
+
+#centerDiv {
+    padding-top: 30vh;
+}
+
+.card {
+    border: 3px solid rgb(11, 70, 138);
+}
+
+#image {
+    width: 30%;
+}

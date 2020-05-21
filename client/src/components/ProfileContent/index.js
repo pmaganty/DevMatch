@@ -12,35 +12,31 @@ import { useAuth0 } from "../../react-auth0-spa"; //FOR AUTH
 
 function ProfileContent () {
 
-    const { user } = useAuth0();
-    let userInfo;
+    const [state, dispatch] = useStoreContext();
 
-    useEffect(async () => {
-        console.log(user.email);
-        let profile = await API.getProfileInfo(user.email);
-        console.log(profile.data);
-        userInfo = profile.data;
-        console.log(userInfo);
-    }, []);
+    console.log(state.curUser.collaborators);
 
     return (
-        <div id="whole" className="row">
+        <div className="row justify-content-center">
             <div className="col-sm-11 col-md-11 col-lg-11">
-                <div className="row justify-content-center">
+                <div id="whole" className="row justify-content-center">
                     <div id="profileDiv" className="col-sm-12 col-md-8 col-lg-8">
                         <div id="profileContent">
                             <ProfileInfo 
-                                // description={userInfo.description}
-                                // skills={userInfo.skills}
-                                // email={userInfo.email}
-                                // phone={userInfo.phone}
-                                // key={userInfo.email}
+                                description={state.curUser.description}
+                                skills={state.curUser.skills}
+                                email={state.curUser.email}
+                                phone={state.curUser.phone}
+                                key={state.curUser.email}
                             />
                         </div>
                     </div>
                     <div id="collabDiv" className="col-sm-12 col-md-4 col-lg-4">
                         <div id="collabContent">
-                            <Collaborators />
+                            <Collaborators 
+                                key={state.curUser.collaborators.email}
+                                collaborators={state.curUser.collaborators}
+                            />
                         </div>
                     </div>
                 </div>

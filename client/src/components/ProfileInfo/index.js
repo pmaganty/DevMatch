@@ -9,7 +9,7 @@ import { Row, Col } from "../Grid";
 
 function ProfileInfo ({skills, description, phone, email}) {
     return (
-        <div id="whole">
+        <div>
             <div><h2>My Profile</h2></div>
             <div>
                 <div><p>Skills</p></div>

@@ -12,7 +12,8 @@ function Search() {
 
   return (
     <div>
-    <AuthHeader />
+    {/* <AuthHeader /> */}
+    <Header />
     <SearchBar />
     <SearchResults />
     </div>

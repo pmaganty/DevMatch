@@ -34,6 +34,7 @@ module.exports = {
     console.log(req.params.email);
     db.Profile
       .findOne({ email: req.params.email })
+      .populate("collaborators")
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },
