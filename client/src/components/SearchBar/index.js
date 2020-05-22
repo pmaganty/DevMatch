@@ -26,7 +26,7 @@ const SearchBar = () => {
                 </div>
                 <div id="input" className="col-sm-6 col-md-6 col-lg-6">
                     <input id="inputBox" placeholder="Enter Search Term" ref={searchRef}/>
-                    <button onClick={e => getResults(e)}>Search</button>
+                    <button onClick={e => getResults(e)} className="btn btn-primary ml-2">Search</button>
                 </div>
             </div>
         </div>
