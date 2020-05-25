@@ -1,3 +1,30 @@
 ul {
     background-color: none;
 }
+
+#collabText {
+    padding: 10px;
+    text-align: center;
+    font-size:30px;
+}
+
+#collabDiv {
+    text-align: center;
+}
+
+.eachSkill {
+    padding: 5px;
+    background: #29626F;
+    margin: 5px;
+    font-size: 18px;
+}
+
+.nameTxt {
+    font-size: 18px;
+}
+
+#eachCollab {
+    border: 2px solid #29626F;
+    margin-bottom: 10px;
+    margin-right: 10px;
+}

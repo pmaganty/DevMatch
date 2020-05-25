@@ -9,20 +9,49 @@ import { Row, Col } from "../Grid";
 
 function ProfileInfo ({skills, description, phone, email}) {
     return (
-        <div>
-            <div><h2>My Profile</h2></div>
-            <div>
-                <div><p>Skills</p></div>
-                <div><p>{skills}</p></div>
-            </div>
-            <div>
-                <div><p>About Me</p></div>
-                <div><p>{description}</p></div>
-            </div>
-            <div>
-                <div><p>Contact Info</p></div>
-                <div><p>{phone}</p></div>
-                <div><p>{email}</p></div>
+        <div className="row">
+            <div className="col-sm-12 col-md-12 col-lg-12">
+                <div className="row">
+                    <div id="profileDiv" className="col-sm-12 col-md-12 col-lg-12">
+                        <p id="profileText">My Profile</p>
+                        <div className="about-border"></div>
+                    </div>
+                </div>
+                <div className="row">
+                    <div className="col-sm-12 col-md-12 col-lg-12">
+                        <div id="skillDiv" className="title row">
+                            <p className="titleText">Skills</p>
+                        </div>
+                        <div id="skillListDiv" className="row">
+                            {skills.map(skill => (
+                                <p className="eachSkill">{skill}</p>
+                            ))}
+                        </div>
+                    </div>
+                </div>
+                <div className="row"> 
+                    <div className="col-sm-12 col-md-12 col-lg-12">
+                        <div className=" title row">
+                            <p className="titleText">About Me</p>
+                        </div>
+                        <div className="row">
+                            <p id="aboutInfo">{description}</p>
+                        </div>
+                    </div>
+                </div>
+                <div className="row">
+                    <div className="col-sm-12 col-md-12 col-lg-12">
+                        <div className="row title">
+                            <p className="titleText">Contact Info</p>
+                        </div>
+                        <div className="row">
+                                <p className="contactInfo">Phone: {phone}</p>
+                        </div>
+                        <div className="row">
+                                <p className="contactInfo">Email: {email}</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     );

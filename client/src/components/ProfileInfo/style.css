@@ -3,3 +3,43 @@
     font-style: normal;
     color: #F0ECE2;
 }
+
+#profileText {
+    padding: 10px;
+    text-align: center;
+    font-size:30px;
+}
+
+#profileDiv {
+    text-align: center;
+}
+
+.titleText {
+    font-size: 25px;
+}
+
+#skillDiv, .row {
+    padding-left: 20px;
+    padding-top: 10px;
+}
+
+.eachSkill {
+    padding: 5px;
+    background: #29626F;
+    margin: 5px;
+    font-size: 18px;
+}
+
+#aboutInfo {
+    background: #29626F;
+    font-size: 18px;
+    line-height: 1.6;
+    padding: 5px;
+}
+
+.contactInfo {
+    background: #29626F;
+    font-size: 18px;
+    line-height: 1.6;
+    padding: 5px;
+}

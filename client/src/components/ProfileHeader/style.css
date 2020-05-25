@@ -2,8 +2,6 @@
     color: #F0ECE2;
     width: 513px;
     height: 112px;
-    left: 86px;
-    top: 194px;
     
     font-family: Roboto;
     font-style: normal;
@@ -24,4 +22,13 @@
 .whole {
     background: #2E7180;
     height: 250px;
+}
+
+.box {
+    position:relative;
+}
+.helloText {
+    position:absolute;
+    bottom: 0;
+    left: 0;
 }

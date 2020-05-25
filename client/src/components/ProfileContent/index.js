@@ -32,9 +32,9 @@ function ProfileContent () {
                         </div>
                     </div>
                     <div id="collabDiv" className="col-sm-12 col-md-4 col-lg-4">
-                        <div id="collabContent">
+                        <div className="row justtify-content-center" id="collabContent">
                             <Collaborators 
-                                key={state.curUser.collaborators.email}
+                                key={state.curUser.email}
                                 collaborators={state.curUser.collaborators}
                             />
                         </div>

@@ -25,8 +25,7 @@ const SearchBar = () => {
                     <p id="text">Find the perfect partner for your dream project</p>
                 </div>
                 <div id="input" className="col-sm-6 col-md-6 col-lg-6">
-                    <input id="inputBox" placeholder="Enter Search Term" ref={searchRef}/>
-                    <button onClick={e => getResults(e)}>Search</button>
+                    <input id="inputBox" placeholder="Enter Search Term" onChange={e => getResults(e)} ref={searchRef}/>
                 </div>
             </div>
         </div>
