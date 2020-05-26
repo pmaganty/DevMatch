@@ -38,6 +38,8 @@ const SearchResults = () => {
         <div>
             {state.curSearch.map(profile => (
             <ProfileCard
+
+            photo = {profile.postImg}
             name = {profile.name}
             skills = {profile.skills}
             description = {profile.description}
