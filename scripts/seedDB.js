@@ -16,21 +16,21 @@ const profileSeed = [
   {
     name: "Billy Bob",
     skills: ["react", "javascript", "node"],
-    description: "I am a smart person, I think you should work with me and we can make something great.",
+    description: "I am a smart person, I thinLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.k you should work with me and we can make something great.",
     email: "billybob@billybob.com",
     phone: "5126669783"
   },
   {
     name: "Spongebob Squarepants",
     skills: ["node", "react", "html"],
-    description: "I love everything and everyone and I want to make friends and I am an excellent frycook!",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     email: "spongebob.squarepants@krustykrab.com",
     phone: "6666666666"
   },
   {
     name: "Bill Gates",
     skills: ["react", "python", "docker"],
-    description: "Trust me I'm really smart...",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     email: "billgates@whatever.com",
     phone: "2067778765"
   }

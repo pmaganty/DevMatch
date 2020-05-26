@@ -5,7 +5,8 @@
   
 /* Change the link color to #111 (black) on hover */
 li a:hover {
-  background-color: rgb(236, 221, 221);
+  background-color: #2E7180;
+  border-radius: 20px;
 }
 
 #navbarNavDropdown {

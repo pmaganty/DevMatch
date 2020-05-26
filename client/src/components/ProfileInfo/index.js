@@ -24,7 +24,7 @@ function ProfileInfo ({skills, description, phone, email}) {
                         </div>
                         <div id="skillListDiv" className="row">
                             {skills.map(skill => (
-                                <p className="eachSkill">{skill}</p>
+                                <p key={email} className="eachSkill">{skill}</p>
                             ))}
                         </div>
                     </div>

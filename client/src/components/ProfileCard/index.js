@@ -22,21 +22,29 @@ function ProfileCard ({ name, skills, description, email, phone, Button }) {
         </Row>
         <Row>
           <Col size="md-6">
-            <p className="font-italic small">{skills}</p>
+            <div id="skillListDiv" className="row">
+                {skills.map(skill => (
+                    <p key="{email}" className="eachSkill">{skill}</p>
+                ))}
+            </div>
           </Col>
         </Row>
         <Row>
-          <Col size="12 sm-4 md-2">
+            <Col size="12 sm-4 md-2">
             <img className="img-thumbnail img-fluid w-100" src="" alt={name} />
           </Col>
-          <Col size="12 sm-8 md-10">
+        </Row>
+        <Row>
+            <Col size="12 sm-8 md-10">
             <p>{description}</p>
+            </Col>
+        </Row>
+        <Row>
+          <Col size="12 sm-8 md-10">
+            <p>Email: {email}</p>
           </Col>
           <Col size="12 sm-8 md-10">
-            <p>{email}</p>
-          </Col>
-          <Col size="12 sm-8 md-10">
-            <p>{phone}</p>
+            <p>Phone: {phone}</p>
           </Col>
   
         </Row>

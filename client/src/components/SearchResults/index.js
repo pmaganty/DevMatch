@@ -47,7 +47,7 @@ const SearchResults = () => {
             Button = {() => (<button     
                                 onClick={() => { addCollab(profile._id);
                                 addCheck();  }}             
-                                className="btn btn-primary ml-2"
+                                className="btn ml-2"
                             >
                                 Collaborate
                                 <svg class="bi bi-check-circle" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">

@@ -7,3 +7,13 @@
       margin-bottom: 15px;
     }
   }
+
+  .eachSkill {
+    padding: 5px;
+    background: #29626F;
+    margin: 5px;
+    font-size: 18px;
+    font-family: Roboto;
+    font-style: normal;
+    color: #F0ECE2;
+}

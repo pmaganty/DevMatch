@@ -27,7 +27,7 @@ function Collaborators ({collaborators}) {
                                 </div>
                                 <div id="skillListDiv" className="row">
                                     {collab.skills.map(skill => (
-                                        <p className="eachSkill">{skill}</p>
+                                        <p key={collab.email} className="eachSkill">{skill}</p>
                                     ))}
                                 </div>
                             </div>
