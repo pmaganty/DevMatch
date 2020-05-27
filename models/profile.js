@@ -12,6 +12,10 @@ const profileSchema = new Schema({
       type: Schema.Types.ObjectId,
       ref: "Profile"
     }
+  ],
+  postImg: [
+    { data: Buffer ,
+     contentType: String }
   ]
 });
 

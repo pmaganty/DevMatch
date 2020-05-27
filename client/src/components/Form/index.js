@@ -48,6 +48,16 @@ const Form = () => {
       historyHook.push("/search");
     };
 
+    const onChangeHandler = async (event) => {
+      console.log(event.target.files[0]);
+      try {
+        const response = await API.uploadImage(event.target.files[0]);
+      } catch (err) {
+        console.log(err);
+      }
+      
+    }
+
     return (  
     <div className="row justify-content-center">
     <div className="form-main col-sm-10 col-lg-10 col-md-10" >
@@ -76,6 +86,8 @@ const Form = () => {
           <label for="exampleInputEmail1">Phone Number</label>
           <input className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="512-555-3698" ref={phoneRef}/>
         </div>
+
+        <input type="file" accept="image/*" name="photo" onChange={event => onChangeHandler(event)}></input>
   
         <button type="submit" className="btn btn-primary" onClick={e => addNew(e)}>Submit</button>
       </form>

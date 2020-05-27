@@ -33,6 +33,10 @@ export default {
     console.log("INSIDE SAVE COLLAB");
     console.log(userIds);
     return axios.post("/api/profiles/collabs/", userIds);
+  },
+
+  uploadImage: function(formData) {
+    axios.post( "/upload", formData);
   }
 
 };
