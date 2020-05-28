@@ -1,13 +1,11 @@
 import React from "react";
 import "./style.css";
 import { Link } from "react-router-dom";
-import { useStoreContext } from "../../utils/GlobalState";
-import API from "../../utils/API";
 import { useAuth0 } from "../../react-auth0-spa"; //ADDED FOR AUTH
 
 const Header = () => {
 
-  const { isAuthenticated, loginWithRedirect, logout } = useAuth0(); //ADDED FOR AUTH
+  const { isAuthenticated, logout } = useAuth0(); //ADDED FOR AUTH
 
   return (
     <div>

@@ -31,10 +31,12 @@ module.exports = {
   },
   findByEmail: function(req, res) {
     console.log("INSIDE FIND BY EMAIL FUNCTION");
-    console.log(req.params.email);
+    // console.log(req.params.email);
     db.Profile
       .findOne({ email: req.params.email })
       .populate("collaborators")
+      .populate("requests")
+      .populate("requestors")
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },
@@ -54,9 +56,27 @@ module.exports = {
     console.log("INSIDE UPDATE COLLAB FUNCTION");
     console.log(req.body);
     db.Profile
-      .update( { _id: req.body.curId }, { $push: { collaborators: req.body.id } } )
+      .update( { _id: req.body.curId }, { $push: { collaborators: req.body.otherId } } )
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
+
+    db.Profile
+    .update( { _id: req.body.otherId }, { $push: { collaborators: req.body.curId } } )
+    .then(dbModel => res.json(dbModel))
+    .catch(err => res.status(422).json(err));
+  },
+  saveRequest: function(req, res) {
+    console.log("INSIDE SAVE REQUEST FUNCTION");
+    console.log(req.body);
+    db.Profile
+      .update({_id: req.body.curId}, { $push: { requests: req.body.id } })
+      .then(dbModel => res.json(dbModel))
+      .catch(err => res.status(422).json(err));
+
+    db.Profile
+    .update({_id: req.body.id}, { $push: { requestors: req.body.curId } } )
+    .then(dbModel => res.json(dbModel))
+    .catch(err => res.status(422).json(err));
   },
   remove: function(req, res) {
     db.Profile
@@ -64,5 +84,21 @@ module.exports = {
       .then(dbModel => dbModel.remove())
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
+  },
+
+  removeRequest: function(req, res) {
+    console.log("INSIDE REMOVE REQUEST");
+    console.log(req.body);
+    db.Profile
+      .updateOne( {_id: req.body.curId}, { $pull: { requestors: req.body.otherId } } )
+      .then(dbModel => res.json(dbModel))
+      .catch(err => res.status(422).json(err));
+
+    db.Profile
+    .updateOne( {_id: req.body.otherId}, { $pull: { requests: req.body.curId } } )
+    .then(dbModel => res.json(dbModel))
+    .catch(err => res.status(422).json(err));
   }
+
+  
 };

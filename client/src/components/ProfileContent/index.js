@@ -1,13 +1,8 @@
-import React, {useEffect} from "react";
+import React from "react";
 import "./style.css";
-import { Link } from "react-router-dom";
 import { useStoreContext } from "../../utils/GlobalState";
-import API from "../../utils/API";
-import { ListItem } from "../List";
-import { Row, Col } from "../Grid";
 import ProfileInfo from "../ProfileInfo";
 import Collaborators from "../Collaborators";
-import { useAuth0 } from "../../react-auth0-spa"; //FOR AUTH
 
 
 function ProfileContent () {

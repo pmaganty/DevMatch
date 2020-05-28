@@ -1,6 +1,5 @@
 import React, {useRef} from "react";
 import "./style.css";
-import { Link } from "react-router-dom";
 import { useStoreContext } from "../../utils/GlobalState";
 import API from "../../utils/API";
 

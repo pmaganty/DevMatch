@@ -1,19 +1,19 @@
 import axios from "axios";
 
 export default {
-  // Gets all books
+  // Gets all profiles
   getProfile: function() {
     return axios.get("/api/profiles");
   },
-  // Gets the book with the given id
-  getProfile: function(id) {
-    return axios.get("/api/profiles/" + id);
-  },
-  // Deletes the book with the given id
+  // // Gets the profile with the given id
+  // getProfile: function(id) {
+  //   return axios.get("/api/profiles/" + id);
+  // },
+  // Deletes the profile with the given id
   deleteProfile: function(id) {
     return axios.delete("/api/profiles/" + id);
   },
-  // Saves a book to the database
+  // Saves a profile to the database
   saveProfile: function(profileData) {
     return axios.post("/api/profiles", profileData);
   },
@@ -35,8 +35,18 @@ export default {
     return axios.post("/api/profiles/collabs/", userIds);
   },
 
+  saveCollabRequest: function(userIds) {
+    console.log("INSIDE SAVE COLLAB REQUEST");
+    console.log(userIds);
+    return axios.post("/api/profiles/request/", userIds);
+  },
+
   uploadImage: function(formData) {
     axios.post( "/upload", formData);
+  },
+
+  removeRequests: function(userIds) {
+    axios.post( "/api/profiles/remove", userIds);
   }
 
 };

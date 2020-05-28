@@ -1,15 +1,10 @@
 import React from "react";
 import Header from "../components/Header";
-import {useStoreContext} from "../utils/GlobalState";
-import API from "../utils/API";
 import { useAuth0 } from "../react-auth0-spa"; //FOR AUTH
 import ProfileHeader from "../components/ProfileHeader";
 import ProfileContent from "../components/ProfileContent";
-import AuthHeader from "../components/AuthHeader";
 
 function Profile() {
-
-    const [state, dispatch] = useStoreContext();
   
     const { loading, user } = useAuth0();
 

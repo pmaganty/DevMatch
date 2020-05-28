@@ -1,6 +1,5 @@
 import React from "react";
 import "./style.css";
-import { Link } from "react-router-dom";
 import { useStoreContext } from "../../utils/GlobalState";
 import API from "../../utils/API";
 import ProfileCard from "../ProfileCard";
@@ -8,9 +7,6 @@ import ProfileCard from "../ProfileCard";
 const SearchResults = () => {
 
     const [state, dispatch] = useStoreContext();
-
-    console.log(state.curSearch);
-    console.log(state);
 
     let curId = state.curUser._id;
 
@@ -21,10 +17,14 @@ const SearchResults = () => {
         console.log(curId);
         console.log(id);
         const userIds = {curId, id}
-        const result = await API.saveCollab(userIds);
+        //const result = await API.saveCollab(userIds); //PRAN
+        await API.saveCollabRequest(userIds);
         //console.log(result);
 
-        curUser.collaborators.push(id);
+        // curUser.collaborators.push(id); //PRAN
+        // console.log(curUser); //PRAN
+
+        curUser.requests.push(id);
         console.log(curUser);
 
         dispatch({type: "SAVE_CURRENT_USER", user: curUser});
@@ -43,16 +43,17 @@ const SearchResults = () => {
             description = {profile.description}
             phone = {profile.phone}
             email = {profile.email}
-            key= {profile.email}
+            key= {profile._id}
+            id= {profile._id}
             Button = {() => (<button     
                                 onClick={() => { addCollab(profile._id);
                                 addCheck();  }}             
                                 className="btn ml-2"
                             >
                                 Collaborate
-                                <svg class="bi bi-check-circle" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd" d="M15.354 2.646a.5.5 0 010 .708l-7 7a.5.5 0 01-.708 0l-3-3a.5.5 0 11.708-.708L8 9.293l6.646-6.647a.5.5 0 01.708 0z" clip-rule="evenodd"/>
-                                <path fill-rule="evenodd" d="M8 2.5A5.5 5.5 0 1013.5 8a.5.5 0 011 0 6.5 6.5 0 11-3.25-5.63.5.5 0 11-.5.865A5.472 5.472 0 008 2.5z" clip-rule="evenodd"/>
+                                <svg className="bi bi-check-circle" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M15.354 2.646a.5.5 0 010 .708l-7 7a.5.5 0 01-.708 0l-3-3a.5.5 0 11.708-.708L8 9.293l6.646-6.647a.5.5 0 01.708 0z" />
+                                <path d="M8 2.5A5.5 5.5 0 1013.5 8a.5.5 0 011 0 6.5 6.5 0 11-3.25-5.63.5.5 0 11-.5.865A5.472 5.472 0 008 2.5z" />
                                 </svg> 
                                 
                             </button>)}

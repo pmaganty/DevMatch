@@ -1,6 +1,5 @@
 import React, {useRef} from "react";
 import "./style.css";
-import { Link } from "react-router-dom";
 import { useStoreContext } from "../../utils/GlobalState";
 import API from "../../utils/API";
 import { useHistory } from "react-router-dom";
@@ -51,7 +50,7 @@ const Form = () => {
     const onChangeHandler = async (event) => {
       console.log(event.target.files[0]);
       try {
-        const response = await API.uploadImage(event.target.files[0]);
+        await API.uploadImage(event.target.files[0]);
       } catch (err) {
         console.log(err);
       }

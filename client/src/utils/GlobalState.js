@@ -16,16 +16,16 @@ const reducer = (state, action) => {
   switch (action.type) {
 
     case "ADD_PROFILE":
-      console.log("INSIDE ADD PROFILE CASE"); //FOR DEBUG
-      console.log(action.newProfile);
+      //console.log("INSIDE ADD PROFILE CASE"); //FOR DEBUG
+      //console.log(action.newProfile);
       return {
           ...state,
           profiles: [action.newProfile, ...state.profiles]
       }
 
     case "NEW_SEARCH":
-      console.log("INSIDE NEW SEARCH CASE"); //FOR DEBUG
-      console.log(action.matches);
+      //console.log("INSIDE NEW SEARCH CASE"); //FOR DEBUG
+      //console.log(action.matches);
       return {
           ...state,
           curSearch: action.matches

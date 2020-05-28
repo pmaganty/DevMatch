@@ -1,13 +1,10 @@
 import React from "react";
 import "./style.css";
-import { Link } from "react-router-dom";
-import { useStoreContext } from "../../utils/GlobalState";
-import API from "../../utils/API";
 import { ListItem } from "../List";
 import { Row, Col } from "../Grid";
 
 
-function ProfileCard ({ name, skills, description, email, phone, Button }) {
+function ProfileCard ({ name, skills, description, email, phone, Button, id }) {
     return (
       <ListItem>
         <Row className="flex-wrap-reverse">
@@ -24,7 +21,7 @@ function ProfileCard ({ name, skills, description, email, phone, Button }) {
           <Col size="md-6">
             <div id="skillListDiv" className="row">
                 {skills.map(skill => (
-                    <p key="{email}" className="eachSkill">{skill}</p>
+                    <p key={id} className="eachSkill">{skill}</p>
                 ))}
             </div>
           </Col>

@@ -11,6 +11,16 @@ router.route("/collabs")
 .get(profilesController.findAll)
 .post(profilesController.updateCollab);
 
+// Matches with "/api/profiles/collabs"
+router.route("/request")
+.get(profilesController.findAll)
+.post(profilesController.saveRequest);
+
+// Matches with "/api/profiles/collabs"
+router.route("/remove")
+.get(profilesController.findAll)
+.post(profilesController.removeRequest);
+
 // Matches with "/api/profiles/:skills"
  router
 .route("/skills/:skills")

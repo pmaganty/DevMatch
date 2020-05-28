@@ -13,10 +13,18 @@ const profileSchema = new Schema({
       ref: "Profile"
     }
   ],
-  postImg: [
-    { data: Buffer ,
-     contentType: String }
-  ]
+  requests: [
+    {
+      type: Schema.Types.ObjectId,
+      ref: "Profile"
+    }
+  ],
+  requestors: [
+    {
+      type: Schema.Types.ObjectId,
+      ref: "Profile"
+    }
+]
 });
 
 const Profile = mongoose.model("Profile", profileSchema);
