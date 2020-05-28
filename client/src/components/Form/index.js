@@ -19,6 +19,8 @@ const Form = () => {
     const emailRef = useRef();
     const phoneRef = useRef();
 
+    let imageUrl;
+
     const addNew = async (e) => {
       e.preventDefault();
 
@@ -32,7 +34,8 @@ const Form = () => {
         description: descRef.current.value,
         email: emailRef.current.value,
         skills: skillArr,
-        phone: phoneRef.current.value
+        phone: phoneRef.current.value,
+        image: imageUrl
       };
 
       const res = await API.saveProfile(formData);
@@ -47,14 +50,16 @@ const Form = () => {
       historyHook.push("/search");
     };
 
-    const onChangeHandler = async (event) => {
+    const onChangeHandler = async event => {
+      event.preventDefault();
       console.log(event.target.files[0]);
       try {
-        await API.uploadImage(event.target.files[0]);
+        const response =  await API.uploadImage(event.target.files[0]);
+        console.log(response);
+        imageUrl = response.data.friendlyUrl;
       } catch (err) {
         console.log(err);
       }
-      
     }
 
     return (  

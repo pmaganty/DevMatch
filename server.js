@@ -19,7 +19,7 @@ var storage = multer.diskStorage({
  
 //var upload = multer({ storage: storage });
 
-const upload = multer({dest: __dirname + '/client/uploads/images'});
+const upload = multer({dest: __dirname + '/client/src/images/uploads'});
 
 app.use(bodyParser.json());
 
@@ -38,7 +38,7 @@ app.post('/upload', upload.single('photo'), (req, res) => {
       res.json(
           {
               ...req.file, 
-              friendlyUrl: `/uploads/images/${req.file.filename}`
+              friendlyUrl: `../../images/uploads/${req.file.filename}`
           }
       );
   }

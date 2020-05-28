@@ -36,7 +36,7 @@ const reducer = (state, action) => {
         console.log(action.user);
         return {
             ...state,
-            curUser: action.user
+            curUser: {...action.user}
         }
 
     default:

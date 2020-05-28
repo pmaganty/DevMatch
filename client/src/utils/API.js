@@ -41,8 +41,10 @@ export default {
     return axios.post("/api/profiles/request/", userIds);
   },
 
-  uploadImage: function(formData) {
-    axios.post( "/upload", formData);
+  uploadImage: function (image) {
+    const formData = new FormData();
+    formData.append("photo", image);
+    return axios.post("/upload",formData)
   },
 
   removeRequests: function(userIds) {

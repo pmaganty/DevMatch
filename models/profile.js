@@ -7,6 +7,7 @@ const profileSchema = new Schema({
   description: { type: String },
   email: { type: String },
   phone: { type: String },
+  image: { type: String },
   collaborators: [
     {
       type: Schema.Types.ObjectId,

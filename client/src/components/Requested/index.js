@@ -6,6 +6,8 @@ const Requested = () => {
 
     const [state, dispatch] = useStoreContext();
 
+    console.log(state);
+
 
     return (  
     <div>
@@ -22,10 +24,10 @@ const Requested = () => {
             <tbody>
             {state.curUser.requests.map(request => (
                 <tr key={request._id}>
-                    <td>{request.name}</td>
-                    <td>{request.skills}</td>
-                    <td>{request.email}</td>
-                    <td>{request.phone}</td>
+                    <td key={request._id}>{request.name}</td>
+                    <td key={request._id}>{request.skills}</td>
+                    <td key={request._id}>{request.email}</td>
+                    <td key={request._id}>{request.phone}</td>
                 </tr>
             ))}
             </tbody>
