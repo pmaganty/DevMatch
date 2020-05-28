@@ -24,10 +24,12 @@ const SearchResults = () => {
         // curUser.collaborators.push(id); //PRAN
         // console.log(curUser); //PRAN
 
+        let profile = await API.getProfileInfo(state.curUser.email);
+
         curUser.requests.push(id);
         console.log(curUser);
 
-        dispatch({type: "SAVE_CURRENT_USER", user: curUser});
+        dispatch({type: "SAVE_CURRENT_USER", user: profile.data});
     }
 
     const addCheck = () => {
