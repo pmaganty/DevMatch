@@ -36,15 +36,6 @@ function ProfileCard ({ name, skills, description, email, phone, Button, id }) {
             <p>{description}</p>
             </Col>
         </Row>
-        <Row>
-          <Col size="12 sm-8 md-10">
-            <p>Email: {email}</p>
-          </Col>
-          <Col size="12 sm-8 md-10">
-            <p>Phone: {phone}</p>
-          </Col>
-  
-        </Row>
       </ListItem>
     );
   }

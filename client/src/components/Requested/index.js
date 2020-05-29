@@ -11,8 +11,8 @@ const Requested = () => {
 
     return (  
     <div>
-        <h4>These people have not accepted your collaborate request.</h4>
-        <table>
+        <h4>These people have not responded to your collaborate request:</h4>
+        <table id="people">
             <thead>
                 <tr>
                     <th>Name</th>
@@ -25,7 +25,11 @@ const Requested = () => {
             {state.curUser.requests.map(request => (
                 <tr key={request._id}>
                     <td key={request._id}>{request.name}</td>
-                    <td key={request._id}>{request.skills}</td>
+                    <td>
+                        {request.skills.map(skill => (
+                            <p className="eachskill" key={request._id}>{skill}  </p>
+                        ))}
+                    </td>
                     <td key={request._id}>{request.email}</td>
                     <td key={request._id}>{request.phone}</td>
                 </tr>

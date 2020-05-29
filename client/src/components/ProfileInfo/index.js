@@ -4,7 +4,7 @@ import "./style.css";
 
 function ProfileInfo ({skills, description, phone, email}) {
     return (
-        <div className="row">
+        <div className="row justify-content-center">
             <div className="col-sm-12 col-md-12 col-lg-12">
                 <div className="row">
                     <div id="profileDiv" className="col-sm-12 col-md-12 col-lg-12">

@@ -19,8 +19,9 @@
 }
 
 #skillDiv, .row {
-    padding-left: 20px;
     padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 .eachSkill {
@@ -35,6 +36,7 @@
     font-size: 18px;
     line-height: 1.6;
     padding: 5px;
+    text-align: left;
 }
 
 .contactInfo {

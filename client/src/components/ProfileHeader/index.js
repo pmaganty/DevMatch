@@ -10,12 +10,15 @@ const ProfileHeader = () => {
     console.log(state);
 
     const imageSrc = state.curUser.image;
+    console.log(imageSrc);
+
+    // const userImg = require(imageSrc);
 
     return (  
     <div className="row justify-content-center">
         <div className="col-sm-12 col-lg-12 col-md-12" >
             <div className="box whole row justify-content-center">
-                <img src={require("../../images/uploads/c9f728b621c6c675c0cb522d92dd255e")} alt="userImg"></img>
+                {/* <img src={userImg} alt="userImg"></img> */}
                 <div id="textDiv" className="helloText col-sm-6 col-md-6 col-lg-6">
                     <p id="text">Hello, {state.curUser.name}!</p>
                 </div>

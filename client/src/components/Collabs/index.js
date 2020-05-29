@@ -8,8 +8,8 @@ const Collabs = () => {
 
     return (  
     <div>
-        <h4>Your collaborators.</h4>
-        <table>
+        <h4>Your collaborators:</h4>
+        <table id="people">
             <thead>
                 <tr>
                     <th>Name</th>
@@ -22,7 +22,11 @@ const Collabs = () => {
             {state.curUser.collaborators.map(collab => (
                 <tr key={collab._id}>
                     <td>{collab.name}</td>
-                    <td>{collab.skills}</td>
+                    <td>
+                        {collab.skills.map(skill => (
+                            <p className="eachskill" key={collab._id}>{skill}  </p>
+                        ))}
+                    </td>
                     <td>{collab.email}</td>
                     <td>{collab.phone}</td>
                 </tr>

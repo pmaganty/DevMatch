@@ -33,7 +33,7 @@ const Header = () => {
               </li>
               <li className="nav-item">
                   {/* <a className="nav-link" href="/collaborators">Collaborators</a> */}
-                  {isAuthenticated && <button className="nav-link" onClick={() => logout()}>Log out</button>}
+                  {isAuthenticated && <button className="nav-link" onClick={() => logout({returnTo: window.location.origin})}>Log out</button>}
               </li>
             </ul>
         </div>

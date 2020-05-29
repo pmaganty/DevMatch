@@ -30,7 +30,8 @@ const Requests = () => {
 
         console.log(curUser);
 
-        dispatch({type: "SAVE_CURRENT_USER", user: curUser});
+        let profile = await API.getProfileInfo(state.curUser.email);
+        dispatch({type: "SAVE_CURRENT_USER", user: profile.data});
 
     }
 
@@ -45,15 +46,16 @@ const Requests = () => {
         console.log(userIds);
 
         await API.removeRequests(userIds);
+        let profile = await API.getProfileInfo(state.curUser.email);
 
-        dispatch({type: "SAVE_CURRENT_USER", user: curUser});
+        dispatch({type: "SAVE_CURRENT_USER", user: profile.data});
     }
 
 
     return (  
     <div>
-        <h4>You have new collaborate requests!</h4>
-        <table>
+        <h4>Collaborate requests:</h4>
+        <table id="people">
             <thead>
                 <tr>
                     <th>Name</th>
@@ -67,7 +69,11 @@ const Requests = () => {
             {state.curUser.requestors.map(request => (
                 <tr key={request._id}>
                     <td>{request.name}</td>
-                    <td>{request.skills}</td>
+                    <td>
+                        {request.skills.map(skill => (
+                            <p className="eachskill" key={request._id}>{skill}  </p>
+                        ))}
+                    </td>
                     <td>{request.email}</td>
                     <td>{request.phone}</td>
                     <td>
