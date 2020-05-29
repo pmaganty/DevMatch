@@ -1,5 +1,7 @@
 # DevMatch
 
+<img src="https://user-images.githubusercontent.com/58443430/83215757-4d421c80-a12d-11ea-8510-2c7146cdfc59.png" width="354">
+
 ## Description
 
 DevMatch is a great app for inspiring and experienced developers to connect and collaborate with the best talent in the world of coding and web development! This web app allows the user to find a suitable collaborator by searching a specific skill. The user will submit a request to any and all potential collaborators that are returned in the results page. If the second collaborator accepts the request, they then connect and can work on a dream project!
