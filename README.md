@@ -21,11 +21,10 @@ DevMatch is a great app for inspiring and experienced developers to connect and 
 
 * [Authors](#authors)
         
-* [License](#license)
-        
-* [Contributing](#contributing)
-        
 * [Questions](#questions)
+
+* [License](#license)
+   
         
 ## Installation
         
@@ -34,6 +33,10 @@ To install necessary dependencies, run the following command:
 ```
 npm i
 ```
+
+To view `Auth0` installation and how to create and configure your own app visit their documentation site [here](https://auth0.com/docs/quickstart/spa/react/01-login#configure-auth0).
+
+
 
 ## Technologies
 
@@ -52,16 +55,14 @@ npm i
 * Ashwin Bethala
 * Mia L. Cabrera
 * Aroldo Reyes
-        
-## License
 
-[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
-        
-## Contributing
-        
-Nothing specific, just be great!
         
 ## Questions
         
-If you have any questions about the repo, open an issue or contact [roldie9](https://api.github.com/users/roldie9) directly at null.
+If you are having issues, need support or have any questions about the repo, please let us know.
+Contact us directly through this repository.
+
+## License
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
         
