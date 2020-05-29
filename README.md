@@ -8,9 +8,9 @@ DevMatch is a great app for inspiring and experienced developers to connect and 
 
 [Insert screenshots here]
 
-## Deployed App Link
+## Deployed App
 
-** http://afternoon-springs-32629.herokuapp.com/ **
+Go to [DevMatch](http://afternoon-springs-32629.herokuapp.com/)!
 
         
 ## Table of Contents
@@ -28,11 +28,14 @@ DevMatch is a great app for inspiring and experienced developers to connect and 
         
 ## Installation
         
+### Dependencies
+
 To install necessary dependencies, run the following command:
         
 ```
 npm i
 ```
+### Auth0
 
 To view `Auth0` installation and how to create and configure your own app visit their documentation site [here](https://auth0.com/docs/quickstart/spa/react/01-login#configure-auth0).
 
