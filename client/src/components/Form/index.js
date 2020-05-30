@@ -16,7 +16,6 @@ const Form = () => {
     const nameRef = useRef();
     const descRef = useRef();
     const skillRef = useRef();
-    const emailRef = useRef();
     const phoneRef = useRef();
 
     let imageUrl;
@@ -29,10 +28,14 @@ const Form = () => {
         skillArr[i] = skillArr[i].trim().toLowerCase();
       }
 
+      if (!imageUrl) {
+        imageUrl = "https://u.o0bc.com/avatars/stock/_no-user-image.gif";
+      }
+
       const formData = {
         name: nameRef.current.value,
         description: descRef.current.value,
-        email: emailRef.current.value,
+        email: user.email,
         skills: skillArr,
         phone: phoneRef.current.value,
         image: imageUrl
@@ -79,11 +82,6 @@ const Form = () => {
         <div className="form-group">
           <label for="exampleInputPassword1">Skills</label>
           <input className="form-control"  placeholder="i.e. JavaScript, React, HTML, etc." ref={skillRef}/>
-        </div>
-  
-        <div className="form-group">
-          <label for="exampleInputEmail1">Email</label>
-          <input className="form-control" aria-describedby="emailHelp" placeholder="Enter email" ref={emailRef}/>
         </div>
   
         <div className="form-group">

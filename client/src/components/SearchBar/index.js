@@ -19,8 +19,8 @@ const SearchBar = () => {
     return (  
     <div className="row justify-content-center">
         <div className="col-sm-12 col-lg-12 col-md-12" >
-            <div  className="whole row justify-content-center">
-                <div id="textDiv" className="col-sm-6 col-md-6 col-lg-6">
+            <div  className="wholeSearch row justify-content-center">
+                <div id="searchDiv" className="col-sm-6 col-md-6 col-lg-6">
                     <p id="text">Find the perfect partner for your dream project</p>
                 </div>
                 <div id="input" className="col-sm-6 col-md-6 col-lg-6">

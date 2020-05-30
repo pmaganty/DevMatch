@@ -10,16 +10,16 @@ const PORT = process.env.PORT || 3001;
 
 var storage = multer.diskStorage({
   destination:  (req, file, cb) => {
-    cb(null, __dirname + '/client/uploads/images');
+    cb(null, __dirname + '/client/public/image/uploads');
   },
   filename: (req, file, cb) => {
     cb(null, `${file.fieldname}-${Date.now()}.${file.mimetype.substring(file.mimetype.indexOf("/")+1)}`)
   }
 });
  
-//var upload = multer({ storage: storage });
+var upload = multer({ storage: storage });
 
-const upload = multer({dest: __dirname + '/client/src/images/uploads'});
+// const upload = multer({dest: __dirname + '/client/src/image/uploads'});
 
 app.use(bodyParser.json());
 
@@ -38,7 +38,7 @@ app.post('/upload', upload.single('photo'), (req, res) => {
       res.json(
           {
               ...req.file, 
-              friendlyUrl: `../../images/uploads/${req.file.filename}`
+              friendlyUrl: `image/uploads/${req.file.filename}`
           }
       );
   }

@@ -20,11 +20,11 @@ const AuthHeader = () => {
           <div className="card text-center col-sm-12 col-md-6 col-lg-6">
             <div className="card-body">
               <div className="card-title"><img id="image" alt="logo" src={logo}></img></div>
-              <p className="card-text">Do you have an Idea, but lack the expertise? This application
+              <div className="card-text">Do you have an Idea, but lack the expertise? This application
                   will allow you to search for and work with other Developers who have the skills you're
                   looking for. You'll be added into a database alongside many other developers so you can 
                   create the perfect team that encompasses everything you need to make your dream project 
-                  a reality!</p>
+                  a reality!</div>
               {!isAuthenticated && (
                 <button className="btn btn-primary" onClick={() => loginWithRedirect({})}>Log in</button>
               )}

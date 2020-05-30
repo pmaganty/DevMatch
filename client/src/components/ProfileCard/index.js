@@ -1,10 +1,17 @@
-import React from "react";
+import React, {useState} from "react";
+import ReactImageFallback from "react-image-fallback";
 import "./style.css";
 import { ListItem } from "../List";
 import { Row, Col } from "../Grid";
 
 
-function ProfileCard ({ name, skills, description, email, phone, Button, id }) {
+function ProfileCard ({ name, skills, description, email, phone, Button, id, image }) {
+  const [fallBackImg, setFallBackImg] = useState();
+
+  const fallback = () => {
+      setFallBackImg("https://u.o0bc.com/avatars/stock/_no-user-image.gif");
+  }
+
     return (
       <ListItem>
         <Row className="flex-wrap-reverse">
@@ -28,7 +35,7 @@ function ProfileCard ({ name, skills, description, email, phone, Button, id }) {
         </Row>
         <Row>
             <Col size="12 sm-4 md-2">
-            <img className="img-thumbnail img-fluid w-100" src="" alt={name} />
+            { !fallBackImg ? <img className="img-thumbnail img-fluid w-75" id="userImage" src={image} fallbackImage="https://u.o0bc.com/avatars/stock/_no-user-image.gif" onError={fallback} ></img> : <img id="userImage" src={fallBackImg} alt="userImg"></img>}
           </Col>
         </Row>
         <Row>

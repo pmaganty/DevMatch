@@ -60,8 +60,6 @@ const Requests = () => {
                 <tr>
                     <th>Name</th>
                     <th>Skills</th>
-                    <th>Email</th>
-                    <th>Phone</th>
                     <th></th>
                 </tr>
             </thead>
@@ -74,8 +72,6 @@ const Requests = () => {
                             <p className="eachskill" key={request._id}>{skill}  </p>
                         ))}
                     </td>
-                    <td>{request.email}</td>
-                    <td>{request.phone}</td>
                     <td>
                         <button onClick={() => acceptRequest(request._id)}>Accept</button>
                         <button onClick={() => denyRequest(request._id)}>Deny</button>

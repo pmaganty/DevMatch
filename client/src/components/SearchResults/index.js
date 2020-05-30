@@ -47,6 +47,7 @@ const SearchResults = () => {
             email = {profile.email}
             key= {profile._id}
             id= {profile._id}
+            image = {profile.image}
             Button = {() => (<button     
                                 onClick={() => { addCollab(profile._id);
                                 addCheck();  }}             

@@ -17,8 +17,6 @@ const Requested = () => {
                 <tr>
                     <th>Name</th>
                     <th>Skills</th>
-                    <th>Email</th>
-                    <th>Phone</th>
                 </tr>
             </thead>
             <tbody>
@@ -30,8 +28,6 @@ const Requested = () => {
                             <p className="eachskill" key={request._id}>{skill}  </p>
                         ))}
                     </td>
-                    <td key={request._id}>{request.email}</td>
-                    <td key={request._id}>{request.phone}</td>
                 </tr>
             ))}
             </tbody>

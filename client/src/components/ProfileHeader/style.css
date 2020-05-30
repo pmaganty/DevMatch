@@ -14,21 +14,27 @@
 }
 
 #textDiv {
-    margin: auto;
-    justify-content: center;
-    display: flex;
+    position: absolute;
+    bottom: 0;
+    padding-left: 100px;
 }
 
 .whole {
     background: #2E7180;
-    height: 250px;
+    height: 400px;
+    position: relative;
 }
 
-.box {
-    position:relative;
+
+#userImage {
+    width: 200px;
 }
-.helloText {
-    position:absolute;
-    bottom: 0;
-    left: 0;
+
+#imageDiv {
+    margin: auto;
+    display: flex;
+}
+
+#helloText {
+
 }
