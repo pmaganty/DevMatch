@@ -11,6 +11,8 @@ function Collaborators() {
     <div>
       <Header />
       <CollabPage />
+      <Requests />
+      <Requested />
     </div>
   );
 }
