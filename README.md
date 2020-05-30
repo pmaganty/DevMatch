@@ -12,7 +12,7 @@ DevMatch is a great app for inspiring and experienced developers to connect and 
 ![landing](./readme_imgs/landing.PNG)
 
 ### Profile Page:
-![profile](./readme_imgs/profile.PNG)
+![profile](./readme_imgs/profile_new.PNG)
 
 ### Searching:
 ![search](./readme_imgs/searchPage.PNG)
