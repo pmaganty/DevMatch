@@ -6,7 +6,18 @@ DevMatch is a great app for inspiring and experienced developers to connect and 
 
 ## App Preview
 
-[Insert screenshots here]
+### Landing Page:
+![landing](./readme_imgs/landing.PNG)
+
+### Profile Page:
+![profile](./readme_imgs/profile.PNG)
+
+### Searching:
+![search](./readme_imgs/searchPage.PNG)
+![searchResults](./readme_imgs/searchResults.PNG)
+
+### Collaborators Page:
+![collabs](./readme_imgs/collabs.PNG)
 
 ## Deployed App
 
