@@ -44,8 +44,11 @@ const SearchResults = () => {
 
     return (  
         <div>
+            {/* Filter out users who are currently collaborators or pending requests */}
             {state.curSearch.map(profile => (
-                state.curUser.requests.some(requestor => requestor._id === profile._id) ? "" :
+                state.curUser.requests.some(requestor => requestor._id === profile._id) || 
+                state.curUser.collaborators.some(collaborator => collaborator._id === profile._id) 
+                ? "" :
                 <ProfileCard
                     name = {profile.name}
                     skills = {profile.skills}
