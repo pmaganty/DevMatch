@@ -22,10 +22,10 @@ const Requested = () => {
             <tbody>
             {state.curUser.requests.map(request => (
                 <tr key={request._id}>
-                    <td key={request._id}>{request.name}</td>
+                    <td>{request.name}</td>
                     <td>
                         {request.skills.map(skill => (
-                            <p className="eachskill" key={request._id}>{skill}  </p>
+                            <p className="eachskill" key={skill}>{skill} </p>
                         ))}
                     </td>
                 </tr>

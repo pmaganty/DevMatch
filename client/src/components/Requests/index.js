@@ -69,7 +69,7 @@ const Requests = () => {
                     <td>{request.name}</td>
                     <td>
                         {request.skills.map(skill => (
-                            <p className="eachskill" key={request._id}>{skill}  </p>
+                            <p className="eachskill" key={skill}>{skill} </p>
                         ))}
                     </td>
                     <td>

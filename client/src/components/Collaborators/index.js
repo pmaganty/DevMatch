@@ -15,7 +15,7 @@ function Collaborators ({collaborators}) {
                 </div>
                 <div className="row justify-content-center">
                     {collaborators.map(collab => (
-                        <div id="eachCollab" className="col-sm-11 col-md-11 col-lg-11">
+                        <div key={collab.email} id="eachCollab" className="col-sm-11 col-md-11 col-lg-11">
                             <div className="col-sm-12 col-md-12 col-lg-12">
                                 <div className="row">
                                     <p className="nameTxt">{collab.name}</p>

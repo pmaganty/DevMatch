@@ -1,16 +1,13 @@
-import React, {useEffect} from "react";
+import React from "react";
 import Header from "../components/Header";
-import Collabs from "../components/Collabs";
-import Requests from "../components/Requests";
-import Requested from "../components/Requested";
-import CollabPage from "../components/CollabPage";
+import CollabSection from "../components/CollabSection";
 
 function Collaborators() {
 
   return (
     <div>
       <Header />
-      <CollabPage />
+      <CollabSection />
     </div>
   );
 }

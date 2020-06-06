@@ -1,7 +1,6 @@
 import React, {useState} from "react";
 import "./style.css";
 import { useStoreContext } from "../../utils/GlobalState";
-import userPic from './images/6133ed5e3f55dc74643a535641ceeac8' // relative path to image 
 
 const ProfileHeader = () => {
 

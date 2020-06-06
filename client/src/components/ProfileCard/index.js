@@ -1,14 +1,20 @@
 import React, {useState} from "react";
-import ReactImageFallback from "react-image-fallback";
 import "./style.css";
 import { ListItem } from "../List";
 import { Row, Col } from "../Grid";
 
 
 function ProfileCard ({ name, skills, description, email, phone, Button, id, image }) {
-  const [fallBackImg, setFallBackImg] = useState();
+  const [fallBackImg, setFallBackImg] = useState(undefined);
 
-  const fallback = () => {
+  const attemptToRenderOriginalImage = () => {
+    if(!image || image === "") {
+      return signalFallBackImage();
+    }
+    
+    return image;
+  }
+  const signalFallBackImage = () => {
       setFallBackImg("https://u.o0bc.com/avatars/stock/_no-user-image.gif");
   }
 
@@ -28,14 +34,17 @@ function ProfileCard ({ name, skills, description, email, phone, Button, id, ima
           <Col size="md-6">
             <div id="skillListDiv" className="row">
                 {skills.map(skill => (
-                    <p key={id} className="eachSkill">{skill}</p>
+                    <p key={skill} className="eachSkill">{skill}</p>
                 ))}
             </div>
           </Col>
         </Row>
         <Row>
             <Col size="12 sm-4 md-2">
-            { !fallBackImg ? <img className="img-thumbnail img-fluid w-75" id="userImage" src={image} fallbackImage="https://u.o0bc.com/avatars/stock/_no-user-image.gif" onError={fallback} ></img> : <img id="userImage" src={fallBackImg} alt="userImg"></img>}
+            { !fallBackImg ? 
+              <img className="img-thumbnail img-fluid w-75" id="userImage" src={attemptToRenderOriginalImage()} onError={signalFallBackImage} alt="profile"></img> : 
+              <img id="userImage" src={fallBackImg} alt="userImg"></img>
+            }
           </Col>
         </Row>
         <Row>

@@ -24,7 +24,7 @@ const Collabs = () => {
                     <td>{collab.name}</td>
                     <td>
                         {collab.skills.map(skill => (
-                            <p className="eachskill" key={collab._id}>{skill}  </p>
+                            <p className="eachskill" key={skill}>{skill} </p>
                         ))}
                     </td>
                     <td>{collab.email}</td>

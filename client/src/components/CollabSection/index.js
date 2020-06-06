@@ -4,7 +4,7 @@ import Requests from "../Requests";
 import Requested from "../Requested";
 import Collabs from "../Collabs"
 
-const CollabPage = () => {
+const CollabSection = () => {
 
     return (  
     <div className="row justify-content-center">
@@ -30,4 +30,4 @@ const CollabPage = () => {
 }
 
   
-  export default CollabPage;
+  export default CollabSection;

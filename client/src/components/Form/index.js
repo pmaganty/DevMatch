@@ -70,22 +70,22 @@ const Form = () => {
     <div className="form-main col-sm-10 col-lg-10 col-md-10" >
         <form>
         <div className="form-group">
-          <label for="exampleInputEmail1">Name</label>
+          <label>Name</label>
           <input className="form-control" aria-describedby="emailHelp" placeholder="John Smith" ref={nameRef}/>
         </div>
   
         <div className="form-group">
-          <label for="exampleInputPassword1">Description</label>
+          <label>Description</label>
           <input className="form-control"  placeholder="Tell us about yourself." ref={descRef}/>
         </div>
   
         <div className="form-group">
-          <label for="exampleInputPassword1">Skills</label>
+          <label>Skills</label>
           <input className="form-control"  placeholder="i.e. JavaScript, React, HTML, etc." ref={skillRef}/>
         </div>
   
         <div className="form-group">
-          <label for="exampleInputEmail1">Phone Number</label>
+          <label>Phone Number</label>
           <input className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="512-555-3698" ref={phoneRef}/>
         </div>
 

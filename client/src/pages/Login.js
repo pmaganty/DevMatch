@@ -9,11 +9,9 @@ import { useAuth0 } from "../react-auth0-spa"; //ADDED FOR AUTH
 function Login() {
 
   const { user } = useAuth0(); //ADDED FOR AUTH
+  const [state, dispatch] = useStoreContext();
 
   let historyHook = useHistory();
-
-  //const [state, dispatch] = useStoreContext();
-  const [state, dispatch] = useStoreContext();
 
   const getProfile = async () => {
     if (user) {

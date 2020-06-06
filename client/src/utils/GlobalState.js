@@ -31,6 +31,12 @@ const reducer = (state, action) => {
           curSearch: action.matches
       }
 
+      case "UPDATEE_CURRENT_SEARCH":
+        return {
+            ...state,
+            curSearch: state.curSearch.filter(collaborator => collaborator._id !== action.collaboratorId)
+        }
+
       case "SAVE_CURRENT_USER":
         console.log("INSIDE ADD NEW USER CASE"); //FOR DEBUG
         console.log(action.user);
