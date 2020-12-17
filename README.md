@@ -23,7 +23,7 @@ DevMatch is a great app for inspiring and experienced developers to connect and 
 
 ## Deployed App
 
-Go to [DevMatch](http://afternoon-springs-32629.herokuapp.com/)!
+Go to [DevMatch](http://afternoon-springs-32629.herokuapp.com/)! [NO LONGER SUPPORTED]
 
         
 ## Table of Contents
@@ -48,6 +48,15 @@ To install necessary dependencies, run the following command:
 ```
 npm i
 ```
+
+### Start Application
+
+To start the application on local server:
+
+```
+npm start
+```
+
 ### Auth0
 
 To view `Auth0` installation and how to create and configure your own app visit their documentation site [here](https://auth0.com/docs/quickstart/spa/react/01-login#configure-auth0).
